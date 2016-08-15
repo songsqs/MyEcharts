@@ -24,12 +24,18 @@
 
 package com.github.abel533.echarts.style.itemstyle;
 
+import java.awt.Color;
+import java.io.Serializable;
+
 import com.github.abel533.echarts.Label;
 import com.github.abel533.echarts.LabelLine;
 import com.github.abel533.echarts.code.Position;
-import com.github.abel533.echarts.style.*;
-
-import java.io.Serializable;
+import com.github.abel533.echarts.style.AreaStyle;
+import com.github.abel533.echarts.style.ChordStyle;
+import com.github.abel533.echarts.style.LineStyle;
+import com.github.abel533.echarts.style.LinkStyle;
+import com.github.abel533.echarts.style.NodeStyle;
+import com.github.abel533.echarts.style.TextStyle;
 
 /**
  * @author liuzh
@@ -405,6 +411,21 @@ public abstract class Style<T> implements Serializable {
      */
     public T color(String color) {
         this.color = color;
+        return (T) this;
+    }
+
+    public T color(Color color){
+        StringBuilder sb=new StringBuilder();
+        sb.append("rgb(");
+        sb.append(color.getRed());
+        sb.append(",");
+        sb.append(color.getGreen());
+        sb.append(",");
+        sb.append(color.getBlue());
+        sb.append(")");
+
+        this.color = sb.toString();
+
         return (T) this;
     }
 

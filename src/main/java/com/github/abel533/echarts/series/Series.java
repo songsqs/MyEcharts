@@ -27,7 +27,11 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.AbstractData;
 import com.github.abel533.echarts.Chart;
 import com.github.abel533.echarts.Tooltip;
-import com.github.abel533.echarts.code.*;
+import com.github.abel533.echarts.code.CoordinateSystem;
+import com.github.abel533.echarts.code.SeriesType;
+import com.github.abel533.echarts.code.Symbol;
+import com.github.abel533.echarts.code.X;
+import com.github.abel533.echarts.code.Y;
 import com.github.abel533.echarts.style.ItemStyle;
 
 /**
@@ -381,9 +385,9 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
      *
      * @param itemStyle
      */
-    public Series itemStyle(ItemStyle itemStyle) {
+    public T itemStyle(ItemStyle itemStyle) {
         this.itemStyle = itemStyle;
-        return this;
+        return (T) this;
     }
 
     /**

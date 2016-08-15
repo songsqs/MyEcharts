@@ -24,9 +24,10 @@
 
 package com.github.abel533.echarts.style;
 
-import com.github.abel533.echarts.code.LineType;
-
 import java.io.Serializable;
+
+import com.github.abel533.echarts.code.LineType;
+import com.github.abel533.echarts.style.itemstyle.Normal;
 
 /**
  * @author liuzh
@@ -69,6 +70,11 @@ public class LineStyle implements Serializable {
      * 默认值3，折线主线(IE8+)有效，阴影纵向偏移，正值往下，负值往上
      */
     private Integer shadowOffsetY;
+
+    /**
+     * normal属性
+     */
+    private Normal normal;
 
     /**
      * 获取color值
@@ -207,6 +213,17 @@ public class LineStyle implements Serializable {
     }
 
     /**
+     * 设置normal
+     * 
+     * @param normal
+     * @return
+     */
+    public LineStyle normal(Normal normal){
+        this.normal=normal;
+        return this;
+    }
+
+    /**
      * 获取color值
      */
     public Object getColor() {
@@ -332,5 +349,13 @@ public class LineStyle implements Serializable {
      */
     public void setShadowOffsetY(Integer shadowOffsetY) {
         this.shadowOffsetY = shadowOffsetY;
+    }
+
+    public Normal getNormal() {
+        return normal;
+    }
+
+    public void setNormal(Normal normal) {
+        this.normal = normal;
     }
 }

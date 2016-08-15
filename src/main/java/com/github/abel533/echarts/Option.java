@@ -24,6 +24,12 @@
 
 package com.github.abel533.echarts;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
 import com.github.abel533.echarts.axis.Axis;
 import com.github.abel533.echarts.code.Easing;
 import com.github.abel533.echarts.code.Symbol;
@@ -32,12 +38,6 @@ import com.github.abel533.echarts.option.NoDataLoadingOption;
 import com.github.abel533.echarts.series.Parallel;
 import com.github.abel533.echarts.series.Series;
 import com.github.abel533.echarts.style.ItemStyle;
-
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Description: Option
@@ -1508,4 +1508,5 @@ public class Option implements Serializable {
     public void setNoDataLoadingOption(NoDataLoadingOption noDataLoadingOption) {
         this.noDataLoadingOption = noDataLoadingOption;
     }
+
 }

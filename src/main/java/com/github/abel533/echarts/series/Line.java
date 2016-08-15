@@ -26,6 +26,7 @@ package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.DataFilter;
 import com.github.abel533.echarts.code.SeriesType;
+import com.github.abel533.echarts.style.LineStyle;
 
 /**
  * @author liuzh
@@ -40,6 +41,11 @@ public class Line extends Series<Line> {
      * @see DataFilter
      */
     private Object dataFilter;
+
+    /**
+     * lineStyle
+     */
+    private LineStyle lineStyle;
 
     /**
      * 构造函数
@@ -132,5 +138,18 @@ public class Line extends Series<Line> {
      */
     public void setDataFilter(Object dataFilter) {
         this.dataFilter = dataFilter;
+    }
+
+    public Line lineStyle(LineStyle lineStyle) {
+        this.lineStyle = lineStyle;
+        return this;
+    }
+
+    public LineStyle getLineStyle() {
+        return lineStyle;
+    }
+
+    public void setLineStyle(LineStyle lineStyle) {
+        this.lineStyle = lineStyle;
     }
 }
